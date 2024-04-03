@@ -1,0 +1,7 @@
+llama-index
+llama-index-llms-llama-cpp
+llama-index-embeddings-huggingface
+transformers
+torch 
+torchvision 
+torchaudio
