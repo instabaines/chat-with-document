@@ -1,3 +1,4 @@
+llama-cpp-python -C cmake.args="-DLLAMA_BLAS=ON;-DLLAMA_BLAS_VENDOR=OpenBLAS"
 llama-index
 llama-index-llms-llama-cpp
 llama-index-embeddings-huggingface
@@ -5,3 +6,4 @@ transformers
 torch 
 torchvision 
 torchaudio
+fpdf2

@@ -28,7 +28,7 @@ node_parser = SentenceWindowNodeParser.from_defaults(
     # sentence_splitter =split
 )
 def load_corpus(docs):
-    nodes = node_parser.get_nodes_from_documents([Document(text=docs)], show_progress=False)
+    nodes= [Document(text=doc) for doc in docs]
     return nodes
 
 def load_models():
@@ -53,7 +53,7 @@ def load_models():
         # transform inputs into Llama2 format
         messages_to_prompt=messages_to_prompt,
         completion_to_prompt=completion_to_prompt,
-        verbose=False,
+        verbose=True,
         )
     except:
         raise Exception("unable to fetch model, check your connection and retry")
